@@ -1,7 +1,7 @@
 #include <M5Unified.h>
 #include <Adafruit_SHT31.h>
 
-Adafruit_SHT31 sht31 = Adafruit_SHT31();     // SHT3x用オブジェクト    // SHT3x用オブジェクト
+Adafruit_SHT31 sht31 = Adafruit_SHT31();     // SHT3x用オブジェクト
 
 float tmp      = 0.0;
 float hum      = 0.0;

@@ -11,18 +11,6 @@ HEIGHT = 64
 i2c = I2C(0, scl=Pin(26), sda=Pin(32), freq=200000) 
 oled = SSD1306_I2C(WIDTH, HEIGHT, i2c)
 
-#misaki
-fcolor = 1
-#フォントサイズの倍数
-fsize = 1
-#フォントのビットマップ表示
-def show_bitmap(oled, fd, x, y, color, size):
-    for row in range(0, 7):
-        for col in range(0, 7):
-            if (0x80 >> col) & fd[row]:
-                oled.fill_rect(int(x + col * size), int(y + row * size), size, size, color)
-    oled.show()
-
 #wifi接続
 ssid = 'WifiのID'
 Password = 'password'
